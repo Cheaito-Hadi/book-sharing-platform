@@ -24,6 +24,8 @@ const followRouter = require("./routes/follow.routes");
 app.use("/user", followRouter);
 const userLikes = require("./routes/like.routes");
 app.use("/like", userLikes);
+const searchRouter = require("./routes/search.routes");
+app.use("/search", searchRouter);
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
     mongooseConnect();
