@@ -20,6 +20,8 @@ const shareRouter = require("./routes/Share.routes");
 app.use("/share", authMiddleware, shareRouter);
 const uploadImage = require("./routes/uploadImage.routes");
 app.use("/uploadImage", uploadImage);
+const followRouter = require("./routes/follow.routes");
+app.use("/user", followRouter);
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
     mongooseConnect();
