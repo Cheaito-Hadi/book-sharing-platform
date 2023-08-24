@@ -2,6 +2,7 @@ import './App.css';
 import {Route, Routes} from "react-router";
 import {useEffect, useState} from "react";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
     const [authenticated, setauthenticated] = useState(null);
@@ -15,6 +16,7 @@ function App() {
         return (
             <Routes>
                 <Route path="/" element={<Login/>}/>
+                <Route path="/register" element={<Register/>}/>
             </Routes>
         );
     }
