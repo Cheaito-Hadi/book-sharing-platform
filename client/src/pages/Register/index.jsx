@@ -22,7 +22,7 @@ function Register() {
     const submitUser = async () => {
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/auth/register",
+                "http://127.0.0.1:3001/auth/register",
                 info,
                 {
                     headers: {

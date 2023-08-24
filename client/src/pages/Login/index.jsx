@@ -21,7 +21,7 @@ function Login() {
     const handleLogin = async () => {
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/auth/login",
+                "http://127.0.0.1:3001/auth/login",
                 credentials,
                 {
                     headers: {
