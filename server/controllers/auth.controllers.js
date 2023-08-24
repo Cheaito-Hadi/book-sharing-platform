@@ -34,7 +34,6 @@ const login = async (req, res) => {
 };
 
 const register = async (req, res) => {
-console.log(req.body);
     const {password} = req.body;
 
     const hashedPassword = await bcrypt.hash(password, 10);

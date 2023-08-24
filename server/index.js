@@ -11,6 +11,8 @@ app.use(express.json());
 const authRouter = require("./routes/auth.routes");
 const authMiddleware = require("./middlewares/auth.middleware");
 app.use("/auth", authRouter);
+const shareRouter = require("./routes/Share.routes");
+app.use("/share", authMiddleware, shareRouter);
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
     mongooseConnect();
