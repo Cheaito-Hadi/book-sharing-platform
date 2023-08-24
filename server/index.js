@@ -22,6 +22,8 @@ const uploadImage = require("./routes/uploadImage.routes");
 app.use("/uploadImage", uploadImage);
 const followRouter = require("./routes/follow.routes");
 app.use("/user", followRouter);
+const userLikes = require("./routes/like.routes");
+app.use("/like", userLikes);
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
     mongooseConnect();
