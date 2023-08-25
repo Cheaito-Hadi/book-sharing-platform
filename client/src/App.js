@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Landing from "./pages/Landing";
+import DiscoverBooks from "./pages/DiscoverBooks";
 
 function App() {
     const [authenticated, setauthenticated] = useState(null);
@@ -27,6 +28,7 @@ function App() {
             <Navbar/>
             <Routes>
                 <Route path="/" element={<Landing/>}/>
+                <Route path="/discover-books" element={<DiscoverBooks/>}/>
             </Routes>
         </div>
     );

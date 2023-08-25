@@ -21,7 +21,7 @@ function Navbar() {
             {/*<img src={Logo} alt="image" className="image-logo"/>*/}
             <ul>
                 <a href="/" className={(url === "/" ?" active" : "")}><FontAwesomeIcon icon={faBowlFood} />Feeds</a>
-                <a href="/discover-posts" className={(url === "/shopping-list" ?" active" : "")}><FontAwesomeIcon  icon={faStickyNote}/>Discover new Books</a>
+                <a href="/discover-books" className={(url === "/discover-books" ?" active" : "")}><FontAwesomeIcon  icon={faStickyNote}/>Discover new Books</a>
                 <a href="/" onClick={handleLogout}><FontAwesomeIcon icon={faSignOutAlt} />Logout</a>
             </ul>
         </nav>

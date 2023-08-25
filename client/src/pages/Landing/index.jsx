@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import './styles.css';
-import axios from 'axios';
+    import React, {useEffect, useState} from 'react';
+    import './styles.css';
+    import axios from 'axios';
 import BookCard from "../../components/BookCard";
 import BookModal from "../../components/BookModal";
 
@@ -68,25 +68,6 @@ function Landing() {
             }
         }
 
-        async function fetchAllBookData() {
-            try {
-                const response = await axios.get(url + '/share/get_all_posts',
-                    {
-                        headers: {
-                            "Content-Type": "application/json",
-                        }
-                    });
-                if (response.status === 200) {
-                    
-                    setAllBookData(response.data.data);
-                    setOriginalBookData(response.data.data);
-                }
-            } catch (error) {
-                console.error('Error fetching book data:', error);
-            }
-        }
-
-        fetchAllBookData();
         fetchBookData();
     }, [userId.user._id]);
 
@@ -110,18 +91,6 @@ function Landing() {
                 className="search-input"
                 onChange={(e) => handleSearchText(e.target.value)}
             />
-            <div>
-                <h2>Books recommended by Others:</h2>
-                {isMatch ? (
-                    allBookData.map((book, index) => (
-                        <BookCard key={index} book={book}/>
-                    ))
-                ) : (
-                    originalBookData.map((book, index) => (
-                        <BookCard key={index} book={book}/>
-                    ))
-                )}
-            </div>
             <h2>Your Books</h2>
             <div className="book-container">
                 {bookData.map((book) => (
