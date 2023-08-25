@@ -53,13 +53,13 @@ function Landing() {
             {isModalOpen && (
                 <BookModal closeModal={closeModal}/>
             )}
-            <h2>Your Books</h2>
+            <h2>Your Books:</h2>
             <div className="book-container">
                 {bookData.map((book) => (
                     <BookCard key={book.post._id} book={book}/>
                 ))}
             </div>
-            <h2>Followed Books</h2>
+            <h2>Followed Books:</h2>
             <div className="book-container">
                 {followedBookData.map((book) => (
                     <BookCard key={book.post._id} book={book}/>
