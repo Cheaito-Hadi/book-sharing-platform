@@ -1,7 +1,7 @@
 .landing-container {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .recipe-container {
@@ -23,8 +23,8 @@
 }
 
 .create-btn{
-    background-color: #DA2F2F;
-    color: white ;
+    background-color: #daccbf;
+    color: black ;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -35,6 +35,6 @@
 }
 
 .create-btn:hover {
-    background-color: #68EBEB;
-    color: black;
+    background-color: #c5ba99;
+    color: white;
 }

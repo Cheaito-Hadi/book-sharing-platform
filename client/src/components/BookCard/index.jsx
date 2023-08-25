@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {AiFillHeart} from "react-icons/ai";
 import "./styles.css";
 import axios from "axios";
+// import { FaRegUser, FaUserMinus } from "react-icons/fa";
 
 function BookCard({book}) {
     let userId = JSON.parse(localStorage.getItem("user")) || null;
@@ -73,42 +74,54 @@ function BookCard({book}) {
         }
     };
     useEffect(() => {
-        // isLiked();
         isfollow();
     }, []);
     return (
         <div className="card-container">
             <div>
                 <div className="title-container">
+
                     <h2 className="title-recipe-name">{book.post.title}</h2>
-                    <a className={userId.user._id === book.user.userId ? "hide_div" : "show_div"} onClick={() => {
-                        handleFollow();
-                    }}> {userId.user._id !== book.userId && (userfollow ? "Unfollow" : "Follow")}
-                    </a>
-                    <div className={`icon-container ${userId.user._id === book.user.userId ? "pointer-disable" : ""}`}>
-                        <AiFillHeart
-                            className={`icon ${like ? "icon-liked" : "icon-unliked"}`}
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                likeHandler();
-                            }}
-                        />
-                        <span className="icon-text">{likesCount}</span>
+                    <div className="follow-like">
+                        <div>
+                            {userId.user._id !== book.userId && (
+                                <button
+                                    className={`follow-button ${userfollow ? "followed" : ""}`}
+                                    onClick={() => {
+                                        handleFollow();
+                                    }}
+                                >
+                                    {userfollow ? "Unfollow" : "Follow"}
+                                </button>
+                            )}
+                        </div>
+                        <div
+                            className={`icon-container ${userId.user._id === book.user.userId ? "pointer-disable" : ""}`}>
+                            <AiFillHeart
+                                className={`icon ${like ? "icon-liked" : "icon-unliked"}`}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    likeHandler();
+                                }}
+                            />
+                            <span className="icon-text">{likesCount}</span>
+                        </div>
                     </div>
 
                 </div>
                 <div className="img-container-carousel">
                     <img className="img-carousel" src={'../uploads/images/' + book.post.pic_url} alt="Imag"/>
                 </div>
-                <div className="">
+                <div className="container-card-wrap">
                     <div className="d-flex items-center">
                         <h4 className="cuisine-ing">Author: </h4> <span>{book.post.author}</span>
                     </div>
                     <div className="d-flex items-center">
                         <h4 className="cuisine-ing">Review: </h4> <span>{book.post.review}</span>
                     </div>
+                    Posted by: {book.user.firstName} {book.user.lastName}
                 </div>
-                Posted by: {book.user.firstName} {book.user.lastName}
+
             </div>
         </div>
     );

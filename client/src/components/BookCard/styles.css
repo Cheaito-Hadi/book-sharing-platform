@@ -1,7 +1,7 @@
 .card-container {
-    background-color: #ffbe62;
+    background-color: #e8e4d6;
     width: 400px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@
 .title-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .icons-container {
@@ -29,6 +30,7 @@
 .img-carousel{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 .cuisine-input {
     width: 100%;
@@ -73,18 +75,6 @@
     margin-top: 20px;
 }
 
-.list-btn {
-    background-color: white;
-    color: #fb9300 ;
-    font-weight: 600;
-    padding: 10px 20px;
-    width: 30%;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s;
-}
-
 .list-btn:hover {
     background-color: #0068FB;
     color: white;
@@ -94,11 +84,6 @@
     outline: none;
 }
 
-.icon-container {
-    display: flex;
-    align-items: start;
-    gap: 5px;
-}
 
 .icon {
     cursor: pointer;
@@ -123,3 +108,36 @@
 .icon-liked {
     color: red;
 }
+
+.container-card-wrap{
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #e3d8b1;
+    padding: 5px;
+}
+
+.follow-like{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.follow-button {
+    padding: 5px 10px;
+    font-size: 12px;
+    width: 80px;
+    cursor: pointer;
+    color: white;
+    background-color: #E6BC52;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.follow-button.followed {
+    background-color: white;
+    color: #E6BC52;
+    border: 2px solid #E6BC52;
+    padding: 5px 10px;
+}
+
