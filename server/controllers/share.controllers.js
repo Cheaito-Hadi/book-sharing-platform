@@ -83,6 +83,7 @@ const getAllPosts = async (req, res) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         const otherUsers = await User.find({_id: {$ne: decoded._id}});
+        console.log(decoded)
 
         const otherUserPostPairs = [];
         otherUsers.forEach(user => {

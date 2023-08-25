@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'Bakery', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'Bakery';
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.hide_div {
+    display: none;
+}
+
+.show_div {
+    display: block;
+}
+
+.pointer-disable {
+    pointer-events: none;
+}
+.pointer-enable{
+    pointer-events: none;
+}

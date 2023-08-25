@@ -17,6 +17,7 @@ const login = async (req, res) => {
 
     const {password: hashedPassword, ...userInfo} = user.toJSON();
     debugger
+    console.log(req.body._id)
     const token = jwt.sign(
         {
             firstName: userInfo.firstName,
@@ -43,13 +44,13 @@ const register = async (req, res) => {
     });
     user.firstName = req.body.name?.split(" ")[0];
     user.lastName = req.body.name?.split(" ").slice(1).join(" ");
-
+console.log(user)
     const token = jwt.sign(
         {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
-            _id: req.body._id,
+            _id: user._id.toString(),
         },
         process.env.JWT_SECRET
     );

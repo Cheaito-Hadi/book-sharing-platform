@@ -2,13 +2,9 @@ import React, {useState} from "react";
 import "./styles.css";
 import axios from 'axios';
 
-const STATUS_IDLE = 0
-const STATUS_UPLOADING = 1
-
 function CreateRecipeModal({closeModal}) {
     let userId = JSON.parse(localStorage.getItem("user")) || null;
     const [imageUpload, setImageUpload] = useState();
-    const [status, setStatus] = useState(STATUS_IDLE);
     const [selectedImage, setSelectedImage] = useState(null);
     axios.defaults.headers.common["Authorization"] = `Bearer ${userId.token}`;
     const [data, setData] = useState({
@@ -45,9 +41,10 @@ function CreateRecipeModal({closeModal}) {
                         "Content-Type": "application/json",
                     }
                 });
-            if (response.status === 200) {
+            if (response.data.message === "Book post added successfully") {
                 console.log('Response from server:', response.data);
                 closeModal();
+                window.location.reload(false);
             }
         } catch (error) {
             console.error('Error sending data to the server:', error);
