@@ -24,32 +24,6 @@ function Landing() {
         setIsModalOpen(false);
     };
 
-    const handleSearchText = (text) => {
-        setSearch(text);
-    };
-
-    const handleSearch = async () => {
-        if (search !== "") {
-            try {
-                const response = await axios.get(
-                    `http://127.0.0.1:3001/search/?query=${search}`
-                );
-                if (response.data.message === "success") {
-                    const postSearch = response.data.data;
-                    setAllBookData(postSearch);
-                    setIsMatch(true);
-                } else {
-                    setIsMatch(false);
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        } else {
-            setAllBookData(originalBookData);
-            setIsMatch(true);
-        }
-    };
-
     useEffect(() => {
         async function fetchBookData() {
             try {
@@ -71,10 +45,6 @@ function Landing() {
         fetchBookData();
     }, [userId.user._id]);
 
-    useEffect(() => {
-        handleSearch();
-    }, [search]);
-
     return (
         <div className="landing-container">
             <div className="modal-create-main">
@@ -83,14 +53,6 @@ function Landing() {
             {isModalOpen && (
                 <BookModal closeModal={closeModal}/>
             )}
-            <input
-                type="search"
-                name="search"
-                id="search"
-                placeholder="Search"
-                className="search-input"
-                onChange={(e) => handleSearchText(e.target.value)}
-            />
             <h2>Your Books</h2>
             <div className="book-container">
                 {bookData.map((book) => (
