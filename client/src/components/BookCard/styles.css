@@ -11,7 +11,7 @@
 }
 
 .title-recipe-name{
-    color: white;
+    color: black;
 
 }
 .title-container {
@@ -41,6 +41,7 @@
 }
 .cuisine-ing{
     font-weight: 700;
+    margin: 3px;
 }
 
 .cuisine-wrapper{
@@ -114,6 +115,8 @@
     border-radius: 10px;
     background-color: #e3d8b1;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 .follow-like{
@@ -128,7 +131,7 @@
     width: 80px;
     cursor: pointer;
     color: white;
-    background-color: #E6BC52;
+    background-color: #ada299;
     border: none;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
@@ -136,8 +139,25 @@
 
 .follow-button.followed {
     background-color: white;
-    color: #E6BC52;
-    border: 2px solid #E6BC52;
+    color: #daccbf;
+    border: 2px solid #daccbf;
     padding: 5px 10px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.review{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 70%;
+}
+
+.review-text{
+    font-weight: 700;
 }
 

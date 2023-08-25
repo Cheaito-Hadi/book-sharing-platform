@@ -49,7 +49,7 @@ function DiscoverBooks(){
                 });
                 if (response.status === 200) {
                     setAllBookData(response.data.data);
-                    // setOriginalBookData(response.data.data);
+                    setOriginalBookData(response.data.data);
                 }
             } catch (error) {
                 console.error('Error fetching book data:', error);

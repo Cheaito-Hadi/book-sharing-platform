@@ -22,20 +22,20 @@
 }
 
 .input-main{
-    border-color:#DA2F2F ;
+    border-color:#e3d8b1 ;
     margin-top: 5px;
 }
 
 .remove-btn{
-    background-color: #DA2F2F;
+    background-color: #e3d8b1;
     color: white ;
     border: none;
     border-radius: 10px;
 }
 
 .send-button {
-    background-color: #DA2F2F;
-    color: white ;
+    background-color: #e3d8b1;
+    color: black ;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -46,13 +46,13 @@
 }
 
 .send-button:hover {
-    background-color: #68EBEB;
+    background-color: #b6ac8b;
     color: black;
 }
 
 .modal-close-button {
     background-color: #bfbfbf;
-    color: #fff;
+    color: black;
     border: none;
     margin-top: 5px;
     padding: 10px 20px 25px;
@@ -66,8 +66,8 @@
 }
 
 .add-image-btn{
-    background-color: #DA2F2F;
-    color: white ;
+    background-color: #e3d8b1;
+    color: black ;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
