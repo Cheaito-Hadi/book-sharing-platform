@@ -1,3 +1,7 @@
+.discover-container-page{
+    margin-top: 80px;
+}
+
 .discover-container{
     display: flex;
     flex-wrap: wrap;

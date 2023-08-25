@@ -22,38 +22,19 @@
 }
 
 .input-main{
-    border-color:#fb9300 ;
+    border-color:#DA2F2F ;
     margin-top: 5px;
 }
 
-.ingredient-amount{
-    display: flex;
-    gap: 10px;
-}
-
-.ingredient-amount-inputs{
-    height: 30px;
-    border-radius: 5px;
-    border-color:#fb9300 ;
-}
-
-.brr{
-    max-height: 200px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
 .remove-btn{
-    background-color: #fb9300;
+    background-color: #DA2F2F;
     color: white ;
     border: none;
     border-radius: 10px;
 }
 
 .send-button {
-    background-color: #fb9300;
+    background-color: #DA2F2F;
     color: white ;
     border: none;
     padding: 10px 20px;
@@ -65,18 +46,8 @@
 }
 
 .send-button:hover {
-    background-color: #0068FB;
-    color: white;
-}
-
-.add-more{
-    background-color: #fb9300;
-    color: white ;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-top: 10px;
+    background-color: #68EBEB;
+    color: black;
 }
 
 .modal-close-button {
@@ -95,7 +66,7 @@
 }
 
 .add-image-btn{
-    background-color: #fb9300;
+    background-color: #DA2F2F;
     color: white ;
     border: none;
     padding: 10px 20px;

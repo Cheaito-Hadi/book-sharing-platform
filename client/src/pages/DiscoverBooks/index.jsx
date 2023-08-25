@@ -63,7 +63,7 @@ function DiscoverBooks(){
     }, [search]);
 
     return (
-        <>
+        <div className="discover-container-page">
         <h2>Books recommended by Others:</h2>
             <input
                 type="search"
@@ -78,7 +78,7 @@ function DiscoverBooks(){
                 <BookCard key={index} book={book} />
             ))}
         </div>
-        </>
+        </div>
     );
 
 }

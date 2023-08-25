@@ -48,7 +48,7 @@ function Landing() {
     return (
         <div className="landing-container">
             <div className="modal-create-main">
-                <button onClick={openModal}>Create a Book</button>
+                <button className="create-btn" onClick={openModal}>Create a Book</button>
             </div>
             {isModalOpen && (
                 <BookModal closeModal={closeModal}/>
