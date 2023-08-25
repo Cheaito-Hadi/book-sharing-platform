@@ -3,6 +3,7 @@ import "./styles.css";
 import Input from "../../components/Input";
 import axios from "axios";
 import Parchment from "../../components/Parchment";
+import AnimatedIntro from "../../components/AnimatedIntro";
 
 function Register() {
     const [authenticated, setauthenticated] = useState(
@@ -48,8 +49,10 @@ function Register() {
     };
     return (
         <div className="container">
+            <div>
+                <AnimatedIntro/>
+            </div>
             <div className="inputs-wrapper">
-
                 <Parchment/>
                 <h2 className="signup-heading">Register</h2>
                 <Input
@@ -84,7 +87,7 @@ function Register() {
                     onChange={handleDataChange}
                     type="password"
                 />
-                <a href="/" className="register-here">Go back to login</a>
+                <a href="/" className="reg-here">Go back to login</a>
                 <button className="signup-btn" onClick={submitUser}>
                     Sign Up
                 </button>
